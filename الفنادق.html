@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفنادق</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #444;
+            color: white;
+            text-align: center;
+        }
+
+        /* ===== تنسيق الهيدر ===== */
+        .header {
+            background-color: #f4c842;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+
+        .logo {
+            width: 50px; /* عرض الشعار */
+            height: 50px; /* ارتفاع الشعار */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: black;
+            margin-left: 20px;
+        }
+
+        .logo img {
+            width: 100%; /* جعل الصورة تملأ الحاوية */
+            height: 100%; /* جعل الصورة تملأ الحاوية */
+            object-fit: contain; /* الحفاظ على نسبة العرض إلى الارتفاع */
+        }
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+
+        .nav {
+            flex: 1; /* جعل القائمة تأخذ المساحة المتبقية */
+            display: flex;
+            justify-content: center; /* توسيط الروابط */
+            gap: 15px; /* تباعد بين الروابط */
+        }
+
+        /* ===== قسم الفنادق ===== */
+        .hotels {
+            padding: 20px;
+        }
+
+        .hotels-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .hotel-card {
+            background: white;
+            color: black;
+            padding: 20px;
+            width: 30%;
+            text-align: center;
+            border-radius: 10px; /* زوايا ملساء */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* ظل خفيف */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثيرات عند التحويم */
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-10px); /* تحريك المربع لأعلى عند التحويم */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* زيادة الظل عند التحويم */
+        }
+
+        .hotel-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* تغطية المساحة دون تشويه */
+            border-radius: 10px; /* زوايا ملساء للصور */
+            margin-bottom: 15px;
+        }
+
+        .hotel-card h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333; /* لون داكن للعناوين */
+        }
+
+        .hotel-card p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555; /* لون رمادي للنص */
+        }
+
+        .stars {
+            margin-top: 10px;
+            color: orange;
+            font-size: 20px;
+        }
+
+        /* ===== جدول الأسعار ===== */
+        .pricing {
+            background-color: #a0c4ff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 10px; /* زوايا ملساء */
+        }
+
+        .pricing div {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            background: white;
+            color: black;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background 0.3s ease; /* تأثير عند التحويم */
+        }
+
+        .pricing div:hover {
+            background: #f0f0f0; /* تغيير لون الخلفية عند التحويم */
+        }
+
+        .pricing div:first-child {
+            background: #a0c4ff;
+            font-weight: bold;
+        }
+
+        .pricing a {
+            text-decoration: none;
+            color: black;
+        }
+
+        /* ===== مراجعة التعليقات ===== */
+        .review-section {
+            display: block;
+            background: #ccc;
+            padding: 15px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            margin-top: 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease; /* تأثير عند التحويم */
+        }
+
+        .review-section:hover {
+            background: #bbb; /* تغيير لون الخلفية عند التحويم */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo 1.png" alt="الشعار">
+        </div>
+        <div class="nav">
+            <a href="index.html">الرئيسية</a> |
+            <a href="من نحن.html">من نحن</a> |
+            <a href="الحزم والعروض.html">الحزم والعروض</a> |
+            <a href="منتجعاتنا للغولف.html">منتجعات الغولف</a> |
+            <a href="الفنادق.html">الفنادق</a> |
+            <a href="الملاعب.html">الملاعب</a> |
+            <a href="النادي.html">النادي</a> |
+            <a href="المطاعم والمقاهي.html">المطاعم والمقاهي</a> |
+            <a href="المتجر.html">المتجر</a> |
+            <a href="تواصل معنا.html">تواصل معنا</a>
+        </div>
+    </div>
+
+    <div class="hotels">
+        <h2>الفنادق</h2>
+        <div class="hotels-container">
+            <div class="hotel-card">
+                <img src="images/فندق 2.jpg" alt="صورة الفندق">
+                <h3>Cedar Hotel</h3>
+                <p>فندق يوفر تجربة إقامة راقية مع خدمات استثنائية، تشمل أجنحة فخمة، مطاعم عالمية، سبا متكامل، وخدمة كونسيرج على مدار الساعة، مما يجعله مثاليًا لرجال الأعمال والمسافرين الباحثين عن الراحة المطلقة.</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <div class="hotel-card">
+                <img src="images/فندق 1.jpg" alt="صورة الفندق">
+                <h3>Four Points</h3>
+                <p>فندق يوفر إقامة مريحة بأسعار معقولة، مع خدمات أساسية مثل غرف مجهزة جيدًا وإنترنت مجاني، ويستهدف المسافرين الباحثين عن تجربة إقامة مريحة دون تكاليف عالية.</p>
+                <div class="stars">⭐⭐⭐⭐</div>
+            </div>
+            <div class="hotel-card">
+                <img src="images/فندق 3.jpg" alt="صورة الفندق">
+                <h3>Hotel Epik</h3>
+                <p>فندق صغير بتصميم فريد وأجواء دافئة، يركز على التفاصيل الشخصية والخدمة الودية، ويتميز عادةً بديكورات أنيقة تعكس الطابع المحلي، مما يجعله خيارًا مثاليًا لمحبي التجارب الفريدة.</p>
+                <div class="stars">⭐⭐⭐</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pricing">
+        <div>
+            <span><a href="تواصل معنا.html" style="text-decoration: none; color: black;">اختر ⭕</a></span>
+            <span>150$</span>
+            <span>5 نجوم</span>
+        </div>
+        <div>
+            <span><a href="تواصل معنا.html" style="text-decoration: none; color: black;">اختر ⭕</a></span>
+            <span>135$</span>
+            <span>4 نجوم</span>
+        </div>
+        <div>
+            <span><a href="تواصل معنا.html" style="text-decoration: none; color: black;">اختر ⭕</a></span>
+            <span>110$</span>
+            <span>3 نجوم</span>
+        </div>
+    </div>
+
+    <a href="التعليقات.html" class="review-section">
+        مراجعة تعليقات واراء الزوار السابقين
+    </a>
+    
+</body>
+</html>

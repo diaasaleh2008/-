@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حجز الملاعب - هول إن ون</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #666;
+            color: white;
+        }
+        .header {
+            background-color: #f4c842;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: black;
+            margin-left: 20px;
+        }
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        .nav {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+        .nav a:hover {
+            color: #fff;
+        }
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            background-color: #444;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button, .back-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #f4c542;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-align: center;
+            display: block;
+            color: black;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+        button:hover, .back-btn:hover {
+            background-color: #d4a51c;
+        }
+        .confirmation-message {
+            display: none;
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .social-icons img {
+            width: 40px;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo 1.png" alt="الشعار">
+        </div>
+        <div class="nav">
+            <a href="index.html">الرئيسية</a> |
+            <a href="من نحن.html">من نحن</a> |
+            <a href="الحزم والعروض.html">الحزم والعروض</a> |
+            <a href="منتجعاتنا للغولف.html">منتجعات الغولف</a> |
+            <a href="الفنادق.html">الفنادق</a> |
+            <a href="الملاعب.html">الملاعب</a> |
+            <a href="النادي.html">النادي</a> |
+            <a href="المطاعم والمقاهي.html">المطاعم والمقاهي</a> |
+            <a href="المتجر.html">المتجر</a> |
+            <a href="تواصل معنا.html">تواصل معنا</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2>احجز ملعبك الآن</h2>
+        <form id="bookingForm">
+            <label for="name">الاسم الكامل</label>
+            <input type="text" id="name" placeholder="أدخل اسمك" required>
+            
+            <label for="phone">رقم الهاتف</label>
+            <input type="tel" id="phone" placeholder="أدخل رقم الهاتف" required>
+            
+            <label for="date">تاريخ الحجز</label>
+            <input type="date" id="date" required>
+            
+            <label for="time">وقت الحجز</label>
+            <input type="time" id="time" required>
+            
+            <label for="field">اختر الملعب</label>
+            <select id="field">
+                <option>ملعب الغولف 1</option>
+                <option>ملعب الغولف 2</option>
+                <option>ملعب الغولف 3</option>
+            </select>
+            
+            <label for="people">عدد الأشخاص</label>
+            <input type="number" id="people" placeholder="عدد الأشخاص" min="1" required>
+            
+            <label for="notes">ملاحظات إضافية</label>
+            <textarea id="notes" placeholder="اكتب أي ملاحظات إضافية"></textarea>
+            
+            <button type="submit">إرسال الحجز</button>
+            <button type="button" onclick="history.back()" class="الملاعب">العودة</button>
+        </form>
+        <div class="confirmation-message" id="confirmationMessage">
+            تم إرسال طلب الحجز بنجاح! سنقوم بالتواصل معك قريبًا.
+        </div>
+
+        <div class="social-icons">
+            <img src="images/تويتر.png" alt="Twitter">
+            <img src="images/انستجرام.jpg" alt="Instagram">
+            <img src="images/فيسبوك.png" alt="Facebook">
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع إعادة تحميل الصفحة
+            document.getElementById('confirmationMessage').style.display = 'block'; // عرض رسالة التأكيد
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحزم والعروض</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #666;
+            color: white;
+            text-align: center;
+        }
+        /* شريط الهيدر */
+        .header {
+            background-color: #f4c842;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row-reverse;
+        }
+
+        .logo {
+            width: 50px; /* عرض الشعار */
+            height: 50px; /* ارتفاع الشعار */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: black;
+            margin-left: 20px;
+        }
+
+        .logo img {
+            width: 100%; /* جعل الصورة تملأ الحاوية */
+            height: 100%; /* جعل الصورة تملأ الحاوية */
+            object-fit: contain; /* الحفاظ على نسبة العرض إلى الارتفاع */
+        }
+        .nav a {
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 5px 10px;
+        }
+
+        .nav {
+            flex: 1; /* جعل القائمة تأخذ المساحة المتبقية */
+            display: flex;
+            justify-content: center; /* توسيط الروابط */
+            gap: 15px; /* تباعد بين الروابط */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .offers {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px; /* تباعد بين المربعات */
+        }
+        .offer {
+            background: white;
+            color: black;
+            width: 30%;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* إضافة ظل */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثيرات عند التحويم */
+        }
+        .offer:hover {
+            transform: translateY(-10px); /* تحريك المربع لأعلى عند التحويم */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* زيادة الظل عند التحويم */
+        }
+        .offer p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        .offer button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #f4c842;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background 0.3s ease; /* تأثير عند التحويم */
+        }
+        .offer button:hover {
+            background: #e0b832; /* تغيير لون الخلفية عند التحويم */
+        }
+        .stars {
+            color: #f4c842; /* لون النجوم */
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .purchase-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #f4c842;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none; /* لإزالة الخط التحتي */
+    color: black; /* لون النص */
+    transition: background 0.3s ease;
+}
+.purchase-button:hover {
+    background: #b49634; /* تغيير لون الخلفية عند التحويم */
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <img src="images/logo 1.png" alt="الشعار">
+        </div>
+        <div class="nav">
+            <a href="index.html">الرئيسية</a> |
+            <a href="من نحن.html">من نحن</a> |
+            <a href="الحزم والعروض.html">الحزم والعروض</a> |
+            <a href="منتجعاتنا للغولف.html">منتجعات الغولف</a> |
+            <a href="الفنادق.html">الفنادق</a> |
+            <a href="الملاعب.html">الملاعب</a> |
+            <a href="النادي.html">النادي</a> |
+            <a href="المطاعم والمقاهي.html">المطاعم والمقاهي</a> |
+            <a href="المتجر.html">المتجر</a> |
+            <a href="تواصل معنا.html">تواصل معنا</a>
+        </div>
+    </div>
+    <div class="container">
+        <h2>الحزم والعروض</h2>
+        <div class="offers">
+            <div class="offer">
+                <p>الحزمة الأولى</p>
+                <p>خمس جولات:</p>
+                <p>1- إقامة كاملة لمدة خمس ليال في جناح فاخر</p>
+                <p>2- خمس جولات - 18 حفرة</p>
+                <p>3- جولة واحدة مضمونة في ملعب "سي فيو" الشهير</p>
+                <p>4- جلسة تدريب رقمية مجانية</p>
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <a href="تواصل معنا.html" class="purchase-button">شراء</a>
+            </div>
+            <div class="offer">
+                <p>الحزمة الثانية</p>
+                <p>الجولة الثلاثية:</p>
+                <p>1- إقامة لمدة ليلتين في غرفة مزدوجة مع وجبة الإفطار</p>
+                <p>2- ثلاث جولات - 18 حفرة تشمل خوض جولة واحدة في ملعب "سي فيو" الشهير (إن وجدت)</p>
+                <p>3- تأجير مجاني للعربات</p>
+                <p>4- خصم 20% لمتجر المحترفين</p>
+                <div class="stars">⭐⭐⭐⭐</div>
+                <a href="تواصل معنا.html" class="purchase-button">شراء</a>
+            </div>
+            <div class="offer">
+                <p>الحزمة الثالثة</p>
+                <p>استراحة استجمام:</p>
+                <p>1- إقامة لليلة واحدة مع وجبة إفطار كاملة</p>
+                <p>2- تناول العشاء في أي من مطاعم المنتجع</p>
+                <p>3- الوصول إلى الملاعب (تطبق الرسوم ويستبعد ملعب "سي فيو")</p>
+                <p>4- تأجير نادي مجاني</p>
+                <div class="stars">⭐⭐⭐</div>
+                <a href="تواصل معنا.html" class="purchase-button">شراء</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
